@@ -18,6 +18,7 @@ const Navbar = () => {
     const handleLoginClick = () => {
         localStorage.clear();
         router.push('/login')
+        window.location.reload()
     };
 
     return (

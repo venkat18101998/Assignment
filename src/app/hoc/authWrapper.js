@@ -6,8 +6,12 @@ import Navicationbar from '../navicationbar/page';
 import { useRouter } from "next/navigation";
 
 const AuthWrapper = ({ children }) => {
-    let storedEmail = localStorage.getItem('storedEmail')
     const router = useRouter();
+    let storedEmail = null;
+    if (typeof window !== 'undefined') {
+        storedEmail = localStorage.getItem('storedEmail')
+    }
+
     useEffect(() => {
         if (!storedEmail) {
             router.push('/login');
