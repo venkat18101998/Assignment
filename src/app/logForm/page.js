@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import { TextField, CardHeader, Typography, Divider, Grid } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -27,7 +27,9 @@ const FormFieldComponent = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
 
-
+  useEffect(() => {
+    router.push('/aboutUs');
+  }, []);
 
 
   const handleEmailChange = (event) => {
@@ -51,7 +53,9 @@ const FormFieldComponent = () => {
       return;
     }
     localStorage.setItem('storedEmail', email);
+    window.location.reload()
     router.push('/aboutUs');
+   
   };
 
 
@@ -105,7 +109,7 @@ const FormFieldComponent = () => {
         </div>
 
         <div className='checkBoxField'>
-          <FormControlLabel control={<Checkbox size="small" />} label="Remember Me" />
+          <FormControlLabel control={<Checkbox  size="small" />} label="Remember Me" />
           <Typography
             component="span"
             style={{ color: 'blue' }}
