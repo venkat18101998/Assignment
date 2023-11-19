@@ -43,7 +43,7 @@ const Navicationbar = () => {
                             component="span"
 
                         >
-                            <Link href="/aboutUs"  className={currentRoute === "/aboutUs"
+                            <Link href="/aboutUs" className={currentRoute === "/aboutUs"
                                 ? "link activeLink"
                                 : "link nonActive"}>
                                 About Us Template
@@ -53,7 +53,7 @@ const Navicationbar = () => {
                             variant="h5"
                             component="span"
                         >
-                            <Link href="/blog"  className={currentRoute === "/blog"
+                            <Link href="/blog" className={currentRoute === "/blog"
                                 ? "link activeLink"
                                 : "link nonActive"}>
                                 Blogs
@@ -63,7 +63,7 @@ const Navicationbar = () => {
                             variant="h5"
                             component="span"
                         >
-                            <Link href="/logoGallery"  className={currentRoute === "/logoGallery"
+                            <Link href="/logoGallery" className={currentRoute === "/logoGallery"
                                 ? "link activeLink"
                                 : "link nonActive"}>
                                 Logo Gallery
@@ -109,9 +109,9 @@ const Navicationbar = () => {
                                     variant="h5"
                                     component="span"
                                 >
-                                    <Link href="/aboutUs"   className={currentRoute === "/aboutUs"
-                                ? "link activeLink"
-                                : "link nonActive"}>
+                                    <Link href="/aboutUs" className={currentRoute === "/aboutUs"
+                                        ? "link activeLink"
+                                        : "link nonActive"}>
                                         About Us Template
                                     </Link>
                                 </Typography>
@@ -119,9 +119,9 @@ const Navicationbar = () => {
                                     variant="h5"
                                     component="span"
                                 >
-                                    <Link href="/blog"  className={currentRoute === "/blog"
-                                ? "link activeLink"
-                                : "link nonActive"}>
+                                    <Link href="/blog" className={currentRoute === "/blog"
+                                        ? "link activeLink"
+                                        : "link nonActive"}>
                                         Blogs
                                     </Link>
                                 </Typography>
@@ -129,9 +129,9 @@ const Navicationbar = () => {
                                     variant="h5"
                                     component="span"
                                 >
-                                    <Link href="/logoGallery"  className={currentRoute === "/logoGallery"
-                                ? "link activeLink"
-                                : "link nonActive"}>
+                                    <Link href="/logoGallery" className={currentRoute === "/logoGallery"
+                                        ? "link activeLink"
+                                        : "link nonActive"}>
                                         Logo Gallery
                                     </Link>
                                 </Typography>
