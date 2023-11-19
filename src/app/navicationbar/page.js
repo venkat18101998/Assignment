@@ -1,13 +1,23 @@
 "use client"
 import { Toolbar, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
+import { usePathname } from 'next/navigation';
 
 const Navicationbar = () => {
 
     const router = useRouter();
+    const currentRoute = usePathname();
+    const [activeLink, setActiveLink] = useState('');
 
+    useEffect(() => {
+        setActiveLink(router.pathname);
+    }, [router.pathname]);
+
+    const isActiveLink = (path) => {
+        return path === activeLink ? { color: 'blue' } : { color: 'black' };
+    };
 
     const [showMenu, setShowMenu] = useState(false);
 
@@ -31,8 +41,11 @@ const Navicationbar = () => {
                         <Typography
                             variant="h5"
                             component="span"
+
                         >
-                            <Link href="/aboutUs" className='link'>
+                            <Link href="/aboutUs"  className={currentRoute === "/aboutUs"
+                                ? "link activeLink"
+                                : "link nonActive"}>
                                 About Us Template
                             </Link>
                         </Typography>
@@ -40,7 +53,9 @@ const Navicationbar = () => {
                             variant="h5"
                             component="span"
                         >
-                            <Link href="/blog" className='link'>
+                            <Link href="/blog"  className={currentRoute === "/blog"
+                                ? "link activeLink"
+                                : "link nonActive"}>
                                 Blogs
                             </Link>
                         </Typography>
@@ -48,7 +63,9 @@ const Navicationbar = () => {
                             variant="h5"
                             component="span"
                         >
-                            <Link href="/logoGallery" className='link'>
+                            <Link href="/logoGallery"  className={currentRoute === "/logoGallery"
+                                ? "link activeLink"
+                                : "link nonActive"}>
                                 Logo Gallery
                             </Link>
                         </Typography>
@@ -92,7 +109,9 @@ const Navicationbar = () => {
                                     variant="h5"
                                     component="span"
                                 >
-                                    <Link href="/aboutUs" className='link'>
+                                    <Link href="/aboutUs"   className={currentRoute === "/aboutUs"
+                                ? "link activeLink"
+                                : "link nonActive"}>
                                         About Us Template
                                     </Link>
                                 </Typography>
@@ -100,7 +119,9 @@ const Navicationbar = () => {
                                     variant="h5"
                                     component="span"
                                 >
-                                    <Link href="/blog" className='link'>
+                                    <Link href="/blog"  className={currentRoute === "/blog"
+                                ? "link activeLink"
+                                : "link nonActive"}>
                                         Blogs
                                     </Link>
                                 </Typography>
@@ -108,7 +129,9 @@ const Navicationbar = () => {
                                     variant="h5"
                                     component="span"
                                 >
-                                    <Link href="/logoGallery" className='link'>
+                                    <Link href="/logoGallery"  className={currentRoute === "/logoGallery"
+                                ? "link activeLink"
+                                : "link nonActive"}>
                                         Logo Gallery
                                     </Link>
                                 </Typography>

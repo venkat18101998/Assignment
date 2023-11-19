@@ -76,3 +76,11 @@
   padding-top: 8px;
   padding-bottom: 6px;
 }
+
+.nonActive {
+  color: black !important;
+}
+
+.activeLink {
+  color: blue !important;
+}
