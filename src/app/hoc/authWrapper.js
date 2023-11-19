@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../_components/navbar/page';
 import LoginContainer from '../login/page';
 import Navicationbar from '../navicationbar/page';
@@ -7,18 +7,20 @@ import { useRouter } from "next/navigation";
 
 const AuthWrapper = ({ children }) => {
     const router = useRouter();
-    let storedEmail = null;
-    if (typeof window !== 'undefined') {
-        storedEmail = localStorage.getItem('storedEmail')
-    }
+    const [storedEmail, setStoredEmail] = useState(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const email = localStorage.getItem('storedEmail');
+            setStoredEmail(email);
+        }
+    }, []);
 
     useEffect(() => {
         if (!storedEmail) {
             router.push('/login');
         }
-    }, [storedEmail]);
-
-    console.log(storedEmail, "22");
+    }, [router, storedEmail]);
     return (
         <div>
             {storedEmail ?

@@ -14,7 +14,7 @@ const LoginContainer = () => {
               <img
                 src="login_image.png"
                 alt="Login"
-                style={{ width: '100%', height: 'auto', maxHeight: '595px' }}
+                style={{ width: '100%', height: 'auto', maxHeight: '620px' }}
               />
             </div>
           </Grid>

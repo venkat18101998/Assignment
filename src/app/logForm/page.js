@@ -26,6 +26,10 @@ const FormFieldComponent = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+
+
+
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -101,7 +105,7 @@ const FormFieldComponent = () => {
         </div>
 
         <div className='checkBoxField'>
-          <FormControlLabel control={<Checkbox defaultChecked size="small" />} label="Remember Me" />
+          <FormControlLabel control={<Checkbox size="small" />} label="Remember Me" />
           <Typography
             component="span"
             style={{ color: 'blue' }}
