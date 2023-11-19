@@ -2,8 +2,7 @@
 import { Toolbar, Typography } from '@mui/material'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
-import { useRouter } from "next/navigation";
-import { usePathname } from 'next/navigation';
+import { useRouter, usePathname } from "next/navigation";
 
 const Navicationbar = () => {
 
