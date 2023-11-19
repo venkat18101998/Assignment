@@ -60,15 +60,12 @@
 
 .website {
   font-weight: bold;
-  /* Make 'Website' bold */
   font-style: italic;
-  /* Apply a different font style */
   font-size: 30px;
 }
 
 .restText {
   font-weight: bold;
-  /* Make the rest of the text bold */
 }
 
 .css-1n3sxlg-MuiGrid-root>.MuiGrid-item {
